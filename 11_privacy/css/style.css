@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --white: white;
+            --pink1: #fbe3ee;
+            --pink4: #480933;
+        }
+
+        #layout {
+            max-width: 600px; height: 100%;
+            margin: auto; background: var(--pink1);
+            align-content: center; padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--pink4);
+            /* background: #fbe3ee url('../images/3.png') no-repeat center center /contain; */
+            /* contain이면 빈공간 있게 채워주고 cover이면 빈공간 없게 채움 */
+        }
+
+        a {
+            text-decoration: none; color: black;
+        }
+
+        /***********************main***************************/
+        main {
+            margin: auto;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--pink4);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: var(--pink4);
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        main section a {
+            color: var(--pink4);
+            text-decoration: none;
+        }
+
+        main section a:hover {
+            text-decoration: underline;
+        }
+
+        /***********************패드(아이패드미니 이상)***************************/
+        @media(min-width: 769px) {
+            #layout {
+                height: 100vh;
+            }
+        }
+
+        /*********************데스크톱(아이패드프로 이상)*************************/
+        @media(min-width: 1025px) {
+            h2 {
+                font-size: 1.4rem;
+            }
+            #layout {
+                height: 100vh;
+            }
+        }

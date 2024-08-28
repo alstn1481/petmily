@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+::-webkit-scrollbar {width: 0;} /* 스크롤바 제거 */
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --white: white;
+            --pink1: #fbe3ee;
+            --pink2:#ff63ac;
+            --pink3:#b12883;
+            --pink4: #480933;
+            --pink5: #330722;
+            --purple: #c7bee5;
+        }
+
+        #layout {
+            max-width: 600px;
+            margin: auto;
+            background: var(--pink1);
+            font-family: Arial, sans-serif;
+            color: var(--pink4);
+            height: 100vh;
+            overflow-x: hidden;
+            
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        /***********************main***************************/
+
+        
+        main {
+            background: var(--white);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 70px; /* 하단 네비게이션 바 위 공간 확보 */
+        }
+        
+        .request-card {
+            background: var(--white);
+            border: 1px solid var(--pink4);
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        /* 이미지 부분 */
+        .request-card div:nth-of-type(1) {
+            border: 1px solid var(--pink4);
+            border-radius: 8px;
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .request-card img {
+            height: 100%;
+        }
+
+        /* 내용 부분 */
+        .request-card div:nth-of-type(2) {
+            line-height: 100%;
+            flex: 1;
+            height: 85px;
+            position: relative;
+        }
+
+        .request-card h3 {
+            margin-bottom: 6px;
+            font-size: 1rem;
+            color: var(--pink4);
+        }
+        
+        .request-card p {
+            color: var(--pink5);
+            font-size: 0.8rem;
+            
+        }
+
+        .request-card p:nth-of-type(4) {
+            position: absolute;
+            text-align: right;
+            bottom: 0;
+            right: 0;
+            font-size: 0.8rem;
+        }
+
+        .request-card a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+
+        .request-card a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+
+        /***********************패드(아이패드미니 이상)***************************/
+        @media(min-width: 769px) {
+            
+        }
+
+        /*********************데스크톱(아이패드프로 이상)*************************/
+        @media(min-width: 1025px) {
+            .request-card div:nth-of-type(1) {
+                width: 100px;
+                height: 100px;
+            }
+
+            .request-card div:nth-of-type(2) {
+                line-height: 120%;
+                height: 100px;
+            }
+
+            .request-card p {
+                font-size: 1rem;
+            }
+
+            .request-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .request-card p:nth-of-type(4) {
+                font-size: 1rem;
+            }
+        }

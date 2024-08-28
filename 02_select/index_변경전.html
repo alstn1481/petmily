@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETMILY-선택화면</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+        * {margin:0; padding:0; box-sizing: border-box;}
+
+        :root {
+            --white:white; --pink1:#fbe3ee; --pink2:#ff63ac; --pink3:#b12883; --pink4:#480933; --pink5: #330722; --purple:#c7bee5;
+        }
+
+        #layout {
+            max-width: 600px; height: 100vh;
+            margin: auto; overflow: hidden; background: var(--pink1);
+            /* background: #fbe3ee url('../images/3.png') no-repeat center center /contain; */
+            /* contain이면 빈공간 있게 채워주고 cover이면 빈공간 없게 채움 */
+        }
+
+        a {
+            text-decoration: none; color: black;
+        }
+
+        /***********************시작 로고 애니메이션***************************/
+        #startscreen {
+            width: 100%; height: 100%; align-content: center;
+            animation: fade 3s 0.5s both; text-align: center;
+
+            display: none;
+        }
+
+        #startscreen img {
+            width: 100%; max-width: 400px;
+        }
+        
+        @keyframes fade {
+            0% {opacity: 0;}
+            70% {opacity: 1;}
+            100% {opacity: 0; display: none;}
+        }
+
+        /***********************상단 문구***************************/
+        /* header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: var(--pink2);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--pink4);
+        } */
+
+        /***********************main***************************/
+        main {
+            height: 100%; width: 100%;
+        }
+
+        main section {
+            height: 50%; position: relative;
+            display: flex; align-items: center; justify-content: center;
+            padding: 0 10%;
+        }
+
+        main section h2 {
+            height: 70%;
+            
+        }
+
+        main section a {
+            border: 2px solid var(--pink4);
+            background-color: var(--purple);
+            border-radius: 30px;
+            color: var(--pink4);
+            display: flex; align-items: center; justify-content: center;
+            width: 100%; height: 100%;
+            font-weight: bold; font-size: x-large;
+            justify-content: space-evenly;
+        }
+
+        #owner img {
+            width: 40%;
+        }
+
+        #sitter img {
+            width: 33%;
+        }
+                
+        /***********************패드(아이패드미니 이상)***************************/
+        @media(min-width: 768px) {
+            
+            /* main section a {
+                font-size: xx-large;
+                border-radius: 40px;
+            } */
+        }
+
+        /*********************데스크톱(아이패드프로 이상)*************************/
+        @media(min-width: 1025px) {
+            main section a {
+                font-size: xx-large;
+                border-radius: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <!-- 시작 화면 로고 -->
+        <div id="startscreen"><img src="images/3.png" alt="logo"></div>
+
+        <!-- 상단 -->
+        <!-- <header>당신은 누구입니까?</header> -->
+
+        <!-- 메인 콘텐츠 -->
+        <main>
+            <section id="owner">
+                <h2><a href="#"><img src="images/petowner.png" alt="pet owner">펫오너<br>(Pet Owner)</a></h2>
+            </section>
+            <section id="sitter">
+                <h2><a href="../04. 펫시터_홈화면/index.html"><img src="images/petsitter.png" alt="pet sitter">펫시터<br>(Pet Sitter)</a></h2>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

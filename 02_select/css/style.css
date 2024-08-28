@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: white;
+    --pink1: #fbe3ee;
+    --pink2: #ff63ac;
+    --pink3: #b12883;
+    --pink4: #480933;
+    --pink5: #330722;
+    --purple: #c7bee5;
+}
+
+#layout {
+    max-width: 600px;
+    height: 100vh;
+    margin: auto;
+    overflow: hidden;
+    background: var(--pink1);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/***********************header***************************/
+header {
+    text-align: center;
+    padding: 7% 0 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--pink4);
+    height: 10%;
+}
+
+/***********************main***************************/
+main {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main section {
+    height: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+main section h2 {
+    height: 75%;
+    text-align: center;
+}
+
+main section a {
+    border: 2px solid var(--pink4);
+    background-color: var(--purple);
+    border-radius: 30px;
+    color: var(--pink4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: x-large;
+    justify-content: space-evenly;
+}
+
+main section a:hover {
+    background-color: #b5a9df;
+}
+
+#owner img {
+    width: 40%;
+}
+
+#sitter img {
+    width: 33%;
+}
+
+/***********************팝업 스타일***************************/
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 100;
+    max-width: 80%;
+    width: 300px;
+}
+
+#popup p {
+    margin-bottom: 20px;
+    color: var(--pink4);
+    font-size: 1.2rem;
+}
+
+#popup button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--pink3);
+    color: var(--white);
+}
+
+#popup button:hover {
+    background-color: var(--pink4);
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+
+/***********************패드(아이패드미니 이상)***************************/
+@media (min-width: 768px) {
+    /* main section a {
+        font-size: xx-large;
+        border-radius: 40px;
+    } */
+}
+
+/*********************데스크톱(아이패드프로 이상)*************************/
+@media (min-width: 1025px) {
+    main section a {
+        font-size: xx-large;
+        border-radius: 40px;
+    }
+}
