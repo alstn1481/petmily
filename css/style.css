@@ -29,7 +29,7 @@
         }
 
         #startscreen img {
-            width: 100%; max-width: 400px;
+            width: 100%; max-width: 520px;
         }
         
         @keyframes fade {
@@ -41,6 +41,7 @@
         /***********************header***************************/
         header {
             height: 70vh; width: 100%;
+            animation: fade2 0.5s 3.5s both;
         }
         header h1 {
             width: 90%; height: 100%;
@@ -51,11 +52,14 @@
             width: 100%;
         }
 
+        
+
 
 
         /***********************main***************************/
         main {
             height: 25vh;
+            animation: fade2 0.5s 3.5s both;
         }
 
         main h2 {
@@ -80,6 +84,7 @@
         /***********************footer***************************/
         footer {
             height: 5vh;
+            animation: fade2 0.5s 3.5s both;
         }
         
         footer p {
@@ -89,6 +94,13 @@
         footer p a {
             margin: 0 3%;
             color: rgba(0, 0, 0, 0.3);
+        }
+
+
+
+        @keyframes fade2 {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
         }
 
         /***********************패드(아이패드미니 이상)***************************/
